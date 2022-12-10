@@ -6,7 +6,7 @@ int n = 2;
 Console.Write($"Введите число: ");
 int.TryParse(Console.ReadLine()!, out a);
 
-while (n < a)
+while (n <= a)
 {
    if (n % 2 == 0)
    {
