@@ -41,6 +41,6 @@ int size = array.Length;
 while (i < size)
 {
   array[i] = new Random().Next(0, 11); 
-  Console.Write($"{array[i]} ");
+  Console.Write($"Случайный массив = {array[i]} ");
   i++;
 }
