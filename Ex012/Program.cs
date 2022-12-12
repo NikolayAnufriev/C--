@@ -1,29 +1,20 @@
-﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.  string number = a.ToString();
-
-// double a = 0;
-// double b = 0;
-
-// Console.Write("Введите ваше число ");
-// double.TryParse(Console.ReadLine()!, out a);
-
-// if (a < 10)
-//    Console.Write($"Ответ: {a}");
-// else 
-//    a = (a / 10); 
-//    b = ((a % 10) * 10);
-
-//    Console.Write($"Ответ: {a}");
+﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.  
 
 
-int i = 0;
+int a;
+int b;       // остаток от деления на 10
 int sum = 0;
+int currentN;
 
 Console.Write($"Введите число: ");
-string array = (Console.ReadLine()!);
-int size = array.Length;
+int.TryParse(Console.ReadLine()!, out a);
 
-while (i < size)
-  sum = sum + array[i];
-  i++;
+while (0 < a)
+{
+  b = a % 10;
+  currentN = a / 10;
+  a = a - a + currentN;
+  sum += b;
+}
 
 Console.Write($"Сумма = {sum}");
