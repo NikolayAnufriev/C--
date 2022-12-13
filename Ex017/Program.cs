@@ -7,9 +7,9 @@ int.TryParse(Console.ReadLine()!, out m);
 
 int[] array = new int[m];
 
-for(int i = 0; i < m; i++)
+for(int i = 1; i < m + 1; i++)
 {Console.Write($"Число № {i} = "); 
-int.TryParse(Console.ReadLine()!, out array[i]);}
+int.TryParse(Console.ReadLine()!, out array[i -1]);}
 
 for (int i = 0; i < m; i++)
 {
