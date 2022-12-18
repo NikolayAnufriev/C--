@@ -1,7 +1,7 @@
 ﻿/* Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое 
 элементов в каждом столбце. */
 
-int[,] array = new int[4, 4];
+int[,] array = new int[4, 6];
 
 Console.WriteLine("Заданный двумерный массив: \n");
 
@@ -20,9 +20,11 @@ double sum = 0;
 
 for (int j = 0; j < array.GetLength(1); j++) // Вычисление среднего
 {
+    
     for (int i = 0; i < array.GetLength(0); i++)
     {
         sum += array[i,j];
     }
     Console.Write($"Среднее {j + 1} столбца = {Math.Round(sum / array.GetLength(0), 1)}  \n");
+    sum = 0;
 }
