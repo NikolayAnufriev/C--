@@ -15,18 +15,4 @@ for (int i = 0; i < array.GetLength(0); i++)
     Console.WriteLine();
 }
 
-double max = array[0,0];
-int count = 0; 
-    for (int i = 0; i < array.GetLength(0); count++)
-    {   
-        if (count == array.GetLength(1))
-            i = i + 1;
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i,j] > max)
-            max = array[i,j];
-
-        }
-        Console.Write($"{max}");
-
-    }
+for (int j = 0; j < array.GetLength(1); j++)
