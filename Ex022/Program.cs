@@ -1,7 +1,7 @@
 ﻿/* Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы 
 каждой строки двумерного массива. */
 
-double[,] array = new double[3, 4];
+int[,] array = new int[3, 4];
 
 Console.WriteLine("Заданный двумерный массив: \n");
 
@@ -15,4 +15,26 @@ for (int i = 0; i < array.GetLength(0); i++)
     Console.WriteLine();
 }
 
-for (int j = 0; j < array.GetLength(1); j++)
+/* for (int j = 0; j < array.GetLength(1); j++)
+{
+    int current = j;
+
+
+if (array [i, j] )
+
+
+} */
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int n = 0; n < array.GetLength(1); n++)
+    {
+        int max = array[i,j];
+        for (int j = 0 + n; j < array.GetLength(1); j++)
+            {
+               if (array[i,j] > max)
+               max = array[i,j];
+            }
+        Console.Write($"{max} ");
+    }  
+}   
