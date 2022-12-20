@@ -2,12 +2,8 @@
 каждой строки двумерного массива. */
 
 int[,] array = new int[4, 4];
-int c = 0;
-/* int c = 0; int n = 0;
-int l = 1;
-int max = 0; */
 
-Console.WriteLine("Заданный двумерный массив: \n");
+Console.WriteLine("Заданный двумерный массив: ");
 
 for (int i = 0; i < array.GetLength(0); i++)
 {
@@ -19,38 +15,29 @@ for (int i = 0; i < array.GetLength(0); i++)
     Console.WriteLine();
 }
 Console.WriteLine();
-/* for(int i = 0; i < array.GetLength(0); i++)
+
+for (int x = 0; x < array.GetLength(0); x++)
 {
-    while (n < array.GetLength(0))
-    {    
-         if (array[c, n] > max)
-             max = array[c,n];
-         n++;
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+        int k = array[x, i];
+        int j = i - 1;
+
+        while (j >= 0 && array[x, j] < k)
+        {
+            array[x, j + 1] = array[x, j];
+            array[x, j] = k;
+            j--;
+        }
+    }    
+}
+Console.WriteLine("Отсортированный массив: ");
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        Console.Write($"{array[i, j]} ");
     }
-    Console.Write($"{max} ");
-    max = 0; 
-    n = 0;
-    n += l; 
-    l++;
+    Console.WriteLine();
 }
- */
-
-
-int[] array1 = new int[array.GetLength(0)];
-
-for (int i = 0; i < array1.Length; i++)
-{
-     array1[i] = array[c,i];
-     Console.Write($"{array1[i]} ");
-}
-Console.WriteLine();
-c = c + 1;
-int[] array2 = new int[array.GetLength(0)];
-
-for (int i = 0; i < array2.Length; i++)
-{
-     array2[i] = array[c,i];
-     Console.Write($"{array1[i]} ");
-}
-Console.WriteLine();
-Console.WriteLine($"{c} ");
