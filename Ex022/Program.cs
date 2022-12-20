@@ -1,7 +1,11 @@
 ﻿/* Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы 
 каждой строки двумерного массива. */
 
-int[,] array = new int[3, 4];
+int[,] array = new int[4, 4];
+int c = 0;
+/* int c = 0; int n = 0;
+int l = 1;
+int max = 0; */
 
 Console.WriteLine("Заданный двумерный массив: \n");
 
@@ -14,27 +18,39 @@ for (int i = 0; i < array.GetLength(0); i++)
     }
     Console.WriteLine();
 }
-
-/* for (int j = 0; j < array.GetLength(1); j++)
+Console.WriteLine();
+/* for(int i = 0; i < array.GetLength(0); i++)
 {
-    int current = j;
+    while (n < array.GetLength(0))
+    {    
+         if (array[c, n] > max)
+             max = array[c,n];
+         n++;
+    }
+    Console.Write($"{max} ");
+    max = 0; 
+    n = 0;
+    n += l; 
+    l++;
+}
+ */
 
 
-if (array [i, j] )
+int[] array1 = new int[array.GetLength(0)];
 
-
-} */
-
-for (int i = 0; i < array.GetLength(0); i++)
+for (int i = 0; i < array1.Length; i++)
 {
-    for (int n = 0; n < array.GetLength(1); n++)
-    {
-        int max = array[i,j];
-        for (int j = 0 + n; j < array.GetLength(1); j++)
-            {
-               if (array[i,j] > max)
-               max = array[i,j];
-            }
-        Console.Write($"{max} ");
-    }  
-}   
+     array1[i] = array[c,i];
+     Console.Write($"{array1[i]} ");
+}
+Console.WriteLine();
+c = c + 1;
+int[] array2 = new int[array.GetLength(0)];
+
+for (int i = 0; i < array2.Length; i++)
+{
+     array2[i] = array[c,i];
+     Console.Write($"{array1[i]} ");
+}
+Console.WriteLine();
+Console.WriteLine($"{c} ");
