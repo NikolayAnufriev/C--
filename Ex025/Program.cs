@@ -4,15 +4,15 @@
 int[,,] array = new int[2,2,2];
 
 Console.WriteLine("Заданный трехмерный массив массив: \n");
-int number = 10;
+int number = 13;
 for (int x = 0; x < array.GetLength(0); x++)
 {
     for (int y = 0; y < array.GetLength(1); y++)
     {
         for (int z = 0; z < array.GetLength(2); z++)
         {
-            array[x, y, z] = new Random().Next(10, 50) + number;
-            number++;
+            array[x, y, z] = number;
+            number += 10;
             Console.Write($"{array[x, y, z]} ({x},{y},{z}) ");
         }
         Console.WriteLine();
